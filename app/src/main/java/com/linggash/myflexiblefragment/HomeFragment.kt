@@ -27,6 +27,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
             val mFragmentManager = parentFragmentManager
             mFragmentManager.beginTransaction().apply {
                 replace(R.id.frame_container, mCategoryFragment, CategoryFragment::class.java.simpleName)
+                addToBackStack(null)
                 commit()
             }
         }
