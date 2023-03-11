@@ -1,5 +1,6 @@
 package com.linggash.myflexiblefragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -53,6 +54,11 @@ class DetailCategoryFragment : Fragment() {
             val categoryName = arguments?.getString(EXTRA_NAME)
             tvCategoryName.text = categoryName
             tvCategoryDescription.text = description
+        }
+
+        btnProfile.setOnClickListener {
+            val mIntent = Intent(requireActivity(), ProfileActivity::class.java)
+            startActivity(mIntent)
         }
     }
 
